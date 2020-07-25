@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="512.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddProduct">
+   <children>
+      <TextField fx:id="productIdTxt" disable="false" layoutX="97.0" layoutY="145.0" promptText="Auto Gen - Disabled" />
+      <TextField fx:id="ProductNameTxt" layoutX="97.0" layoutY="185.0" promptText="Product Name" />
+      <TextField fx:id="ProductInvTxt" layoutX="97.0" layoutY="226.0" promptText="Inv" />
+      <TextField fx:id="ProductPriceTxt" layoutX="98.0" layoutY="263.0" prefHeight="27.0" prefWidth="161.0" promptText="Price" />
+      <TextField fx:id="ProductMaxTxt" layoutX="98.0" layoutY="302.0" prefHeight="27.0" prefWidth="57.0" promptText="Max" />
+      <Button fx:id="AddProductSearchBtn" layoutX="323.0" layoutY="36.0" mnemonicParsing="false" onAction="#OnActionSearchProduct" prefHeight="27.0" prefWidth="75.0" text="Search" />
+      <TextField fx:id="partSearchTxt" layoutX="454.0" layoutY="36.0" />
+      <TableView fx:id="addPartTbl" layoutX="319.0" layoutY="77.0" prefHeight="135.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="partIdCol" prefWidth="83.0" text="Part ID" />
+          <TableColumn fx:id="partNameCol" prefWidth="84.0" text="Part Name" />
+            <TableColumn fx:id="partInvCol" prefWidth="81.0" text="Inventory Levell" />
+            <TableColumn fx:id="partPriceCol" prefWidth="90.0" text="Price Per Unit" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </TableView>
+      <Button fx:id="AddProductDeleteBtn" layoutX="568.0" layoutY="413.0" mnemonicParsing="false" onAction="#OnActionDeleteProduct" text="Delete" />
+      <Button fx:id="AddProductCancelBtn" layoutX="568.0" layoutY="453.0" mnemonicParsing="false" onAction="#OnActionCancelAddProduct" text="Cancel" />
+      <Button fx:id="AddProductSaveBtn" layoutX="505.0" layoutY="453.0" mnemonicParsing="false" onAction="#OnActionSaveProductAdd" text="Save" />
+      <Button fx:id="AddProductAddBtn" layoutX="560.0" layoutY="226.0" mnemonicParsing="false" onAction="#OnActionAddPart" text="Add" />
+      <TableView fx:id="ascPartTTbl" layoutX="319.0" layoutY="268.0" prefHeight="135.0" prefWidth="300.0">
+         <columns>
+            <TableColumn fx:id="ascPartIDCol" prefWidth="65.0" text="Part ID" />
+            <TableColumn fx:id="ascPartNameCol" prefWidth="84.0" text="Part Name" />
+            <TableColumn fx:id="ascPartInvCol" prefWidth="81.0" text="Inventory Levell" />
+            <TableColumn fx:id="ascPartPriceCol" prefWidth="90.0" text="Price Per Unit" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </TableView>
+      <TextField fx:id="ProductMinTxt" layoutX="98.0" layoutY="342.0" prefHeight="27.0" prefWidth="57.0" promptText="Min" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="45.0" prefWidth="149.0" text="Add Product">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="145.0" prefHeight="27.0" prefWidth="41.0" text="ID" />
+      <Label layoutX="27.0" layoutY="185.0" prefHeight="27.0" prefWidth="41.0" text="Name" />
+      <Label layoutX="27.0" layoutY="226.0" prefHeight="27.0" prefWidth="41.0" text="Inv" />
+      <Label layoutX="27.0" layoutY="263.0" prefHeight="27.0" prefWidth="41.0" text="Price" />
+      <Label layoutX="27.0" layoutY="302.0" prefHeight="27.0" prefWidth="41.0" text="Max" />
+      <Label layoutX="27.0" layoutY="342.0" prefHeight="27.0" prefWidth="41.0" text="Min" />
+      <Label alignment="CENTER" layoutX="319.0" layoutY="217.0" prefHeight="45.0" prefWidth="149.0" text="All Parts">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="324.0" layoutY="404.0" prefHeight="45.0" prefWidth="149.0" text="Associated Parts">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
